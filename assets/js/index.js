@@ -1,4 +1,6 @@
-/*  Brian's Pseudo Code: consent given by writer to use for this assignment.
+
+
+  /*  Brian's Pseudo Code: consent given by writer to use for this assignment.
 You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
 ## Minimum Requirements
 * The application displays timeblocks for standard business hours (9 a.m. to 5 p.m.).
@@ -49,7 +51,12 @@ $(document).ready(function(){
     event.target.preventDefault;
     console.log("you got clicked", $(this).attr("id"))
     console.log("what we typed", $("#text" + $(this).attr("id")).val());
+    const output= JSON.stringify($(this).attr("id"));
+    localStorage.setItem("input" + $(this).attr("id"), $("#text" + $(this).attr("id")).val());
+    console.log(output)
+    
   });
+  
   });
 
 
@@ -83,9 +90,5 @@ $(document).ready(function(){
   
 
 // brian did that thing today with an array... where was that at resources?
-
-
-
-
 
 
